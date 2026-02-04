@@ -3,99 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Góc Game Thủ - Uy Tín Giá Rẻ</title>
+    <title>Shop Roblox - Góc Game Thủ</title>
     <style>
-        /* Cấu hình giao diện chung */
-        body { font-family: sans-serif; background-color: #1a1a1a; color: white; margin: 0; padding: 0; }
+        /* Cài đặt màu sắc theo ý bạn: Nền xanh, chữ vàng */
+        body { 
+            font-family: sans-serif; 
+            background-color: #15803d; /* Green-700 */
+            color: #fde047; /* Yellow-300 */
+            margin: 0; 
+            padding: 0; 
+        }
         
-        /* Phần đầu trang (Header) */
-        header { background: linear-gradient(90deg, #ff4757, #ff6b81); padding: 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        h1 { margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        .sub-text { font-size: 0.9em; margin-top: 5px; opacity: 0.9; }
+        /* Header */
+        header { 
+            text-align: center; 
+            padding: 30px; 
+            background: #14532d; /* Màu xanh đậm hơn chút */
+            border-bottom: 2px solid #fde047;
+        }
+        header img { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            border: 3px solid #fde047;
+            object-fit: cover;
+        }
+        h1 { margin-top: 10px; text-transform: uppercase; text-shadow: 2px 2px #000; }
 
         /* Khung chứa sản phẩm */
         .container { 
-            max-width: 1000px; 
-            margin: 30px auto; 
-            padding: 0 10px; 
+            max-width: 1100px; 
+            margin: 20px auto; 
+            padding: 0 15px; 
+        }
+
+        /* Tiêu đề từng mục */
+        .section-title {
+            text-align: center;
+            background-color: #fde047;
+            color: #14532d;
+            padding: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        /* Lưới sản phẩm */
+        .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
+            gap: 20px; 
         }
 
-        /* Thẻ sản phẩm (Card) */
-        .card { background: #2f3542; border-radius: 12px; overflow: hidden; border: 1px solid #57606f; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); border-color: #ff4757; }
+        /* Thẻ sản phẩm */
+        .card { 
+            background: white; 
+            color: #333; /* Chữ trong thẻ màu đen cho dễ đọc */
+            border-radius: 10px; 
+            padding: 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border: 2px solid #fde047;
+        }
         
-        /* Ảnh sản phẩm */
-        .card img { width: 100%; height: 160px; object-fit: cover; border-bottom: 2px solid #ff4757; }
-        
-        /* Thông tin sản phẩm */
-        .card-body { padding: 15px; text-align: center; }
-        .game-title { color: #7bed9f; font-weight: bold; margin-bottom: 5px; }
-        .acc-info { font-size: 0.9em; color: #dfe4ea; margin-bottom: 15px; height: 40px; } /* Cố định chiều cao mô tả */
-        
-        /* Giá và Nút mua */
-        .price { color: #ffa502; font-weight: bold; font-size: 1.4em; display: block; margin-bottom: 10px; }
+        .item-name { font-weight: bold; font-size: 1.1em; margin-bottom: 5px; color: #15803d; }
+        .item-price { color: #d97706; font-weight: bold; font-size: 1.3em; margin-bottom: 15px; }
+
+        /* Nút mua */
         .btn { 
-            display: block; 
-            background: #ff4757; 
-            color: white; 
-            padding: 12px; 
+            display: inline-block; 
+            background: #15803d; 
+            color: #fff; 
+            padding: 10px 20px; 
             text-decoration: none; 
-            border-radius: 8px; 
+            border-radius: 5px; 
             font-weight: bold;
+            width: 80%;
         }
-        .btn:hover { background: #e84118; }
+        .btn:hover { background: #166534; cursor: pointer; }
 
-        /* Chân trang */
-        footer { text-align: center; padding: 20px; color: #747d8c; font-size: 0.9em; border-top: 1px solid #57606f; margin-top: 30px; background: #2f3542; }
+        /* Video Youtube */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        iframe { width: 100%; border-radius: 10px; }
+
+        footer { text-align: center; padding: 20px; margin-top: 50px; border-top: 1px solid #fde047; opacity: 0.8; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>SHOP GÓC GAME THỦ</h1>
-    <p class="sub-text">Chuyên Acc Blox Fruits - Free Fire - Liên Quân | Uy Tín - Giá Học Sinh</p>
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_kX4jX4jX4jX4jX4jX4jX4jX4jX4j=s900-c-k-c0x00ffffff-no-rj" alt="Logo">
+    <h1>SHOP ROBLOX - GÓC GAME THỦ</h1>
+    <p>Uy tín - Giá Rẻ - Duyệt Tự Động</p>
 </header>
 
 <div class="container">
-    <div class="card">
-        <img src="https://i.pinimg.com/736x/8a/8b/b5/8a8bb5b5c136369062363197692d9730.jpg" alt="Blox Fruits">
-        <div class="card-body">
-            <div class="game-title">BLOX FRUITS</div>
-            <h3>Acc Max Level God Human</h3>
-            <p class="acc-info">Sở hữu Song Kiếm Oden, full Melee V2, dư 50M Beli</p>
-            <span class="price">50.000đ</span>
-            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">MUA NGAY</a>
+
+    <div class="section-title">📦 MUA TÀI KHOẢN BLOX FRUITS</div>
+    <div class="grid">
+        <div class="card">
+            <div class="item-name">Level 1000-2000</div>
+            <div class="item-price">10,000 - 40,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Mua Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Level Max + Full Kiếm + Súng</div>
+            <p style="font-size:0.8em">Tặng kèm 1-3 Trái Đỏ</p>
+            <div class="item-price">50k - 100k VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Mua Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Full Gear 1 Tộc</div>
+            <div class="item-price">200,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Mua Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Full Gear 6 Tộc</div>
+            <div class="item-price">500,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Mua Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Full Mọi Thứ Trong Game</div>
+            <div class="item-price">1,000,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Mua Ngay</a>
         </div>
     </div>
 
-    <div class="card">
-        <img src="https://img.youtube.com/vi/aZ3tXjncTv4/sddefault.jpg" alt="Free Fire">
-        <div class="card-body">
-            <div class="game-title">FREE FIRE</div>
-            <h3>Acc Rank Huyền Thoại</h3>
-            <p class="acc-info">Nhiều súng Vip, Full bộ đồ Cobra, Pet lv max</p>
-            <span class="price">120.000đ</span>
-            <a href="https://www.facebook.com/LINK_FB_CUA_BAN" class="btn">MUA NGAY</a>
+    <div class="section-title">⚡ DỊCH VỤ CÀY THUÊ</div>
+    <div class="grid">
+        <div class="card">
+            <div class="item-name">Cày Thuê V4 (1 Gear)</div>
+            <div class="item-price">40,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Thuê Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Cày Max Level</div>
+            <div class="item-price">50,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Thuê Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Cày Mỏ Neo</div>
+            <div class="item-price">80,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Thuê Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Cày Tim Levi</div>
+            <div class="item-price">200,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Thuê Ngay</a>
         </div>
     </div>
 
-    <div class="card">
-        <img src="https://i.ytimg.com/vi/1_M0QcEq-eM/maxresdefault.jpg" alt="Liên Quân">
-        <div class="card-body">
-            <div class="game-title">LIÊN QUÂN</div>
-            <h3>Acc Trắng Thông Tin</h3>
-            <p class="acc-info">50 Tướng, 30 Trang phục, Rank Cao Thủ</p>
-            <span class="price">70.000đ</span>
-            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">MUA NGAY</a>
+    <div class="section-title">💎 NẠP ROBUX (RATE NGON)</div>
+    <div class="grid">
+        <div class="card">
+            <div class="item-name">Gói 1.000 Robux</div>
+            <div class="item-price">100,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Nạp Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Gói 4.000 Robux</div>
+            <div class="item-price">300,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Nạp Ngay</a>
+        </div>
+        <div class="card">
+            <div class="item-name">Gói 20.000 Robux</div>
+            <div class="item-price">1,000,000 VND</div>
+            <a href="https://zalo.me/SDT_CUA_BAN" class="btn">Nạp Ngay</a>
         </div>
     </div>
+
+    <div class="section-title">📺 VIDEO UY TÍN</div>
+    <div class="video-grid">
+        <iframe height="200" src="https://www.youtube.com/embed/jfKfPfyJRdk" allowfullscreen></iframe>
+        <iframe height="200" src="https://www.youtube.com/embed/aZ3tXjncTv4" allowfullscreen></iframe>
+    </div>
+
 </div>
 
 <footer>
-    <p>© 2026 Shop Góc Game Thủ. Giao dịch trung gian uy tín.</p>
+    <p>© 2026 Shop Góc Game Thủ. All rights reserved.</p>
 </footer>
 
 </body>
